@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            tv.setText(LocalTime.now().getSecond() + "");
+                            tv.setText((LocalTime.now().getHour() + 3) + ":" + LocalTime.now().getMinute() + ":" + LocalTime.now().getSecond() + "");
                         }
                     });
 
                     try {
-                        Thread.sleep(1000); // Sleep outside the UI thread
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
